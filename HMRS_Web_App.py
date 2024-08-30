@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 vectormodel = pickle.load(open("MRS_Vectorizer.sav", 'rb'))
 #CosineSimilarity = pickle.load(open("MRS_CosineSimilarity.sav", "rb"))
 
-data = pd.read_csv("D:/Project/Movie Recommendation System/movies.csv")
+data = pd.read_csv("movies.csv")
 
 def movie_recommendation(movie_name):
     # Selecting relevant features
