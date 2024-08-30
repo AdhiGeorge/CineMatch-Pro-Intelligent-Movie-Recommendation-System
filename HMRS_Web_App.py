@@ -54,7 +54,7 @@ def movie_recommendation(movie_name):
         return "Movie not found in the database. Please try again with a different movie name."
 
 def main():
-    # Add custom CSS for YouTube video background and delayed audio playback
+    # Add custom CSS for background video and delayed audio playback
     st.markdown("""
         <style>
         body {
@@ -108,10 +108,13 @@ def main():
         }
         </style>
         <div id="video-background">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cvfVy_I5PrQ?autoplay=1&mute=1&loop=1&playlist=cvfVy_I5PrQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <video autoplay muted loop width="100%" height="100%">
+                <source src="Background Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <audio id="background-audio" loop>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            <source src="Background audio.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         <script>
